@@ -19,7 +19,7 @@ function Drink({ data }) {
 
   const onSubmit = () => {
     dispatch(createOrder({ id: refId.current.innerText, name: refName.current.innerText, client: user.name }));
-    enqueueSnackbar("Barman received your order!");
+    enqueueSnackbar(`Barman received your "${refName.current.innerText}" order!`);
   };
 
   return (
